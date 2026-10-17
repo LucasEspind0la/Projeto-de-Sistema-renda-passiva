@@ -5,9 +5,17 @@ Gestão financeira pessoal com foco em renda passiva e independência financeira
 ```
 financas/
 ├── docker-compose.yml     # PostgreSQL 16
-├── backend/               # Spring Boot 3.3 / Java 17
+├── backend/               # Spring Boot 3.3.4 / Java 21
 └── frontend/              # Angular 17 (standalone + signals)
 ```
+
+## Tecnologias
+
+- **Backend:** Java 21, Spring Boot 3.3.4, Spring Security, Spring Data JPA, Bean Validation, Lombok
+- **Autenticação:** JWT (jjwt 0.12.6)
+- **Banco de dados:** PostgreSQL 16 com migrations Flyway
+- **Frontend:** Angular 17 (standalone + signals)
+- **Infra:** Docker Compose
 
 ## Como rodar
 
