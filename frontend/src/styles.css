@@ -1,0 +1,183 @@
+/* ============================================================
+             Design System (tema escuro)
+   ============================================================ */
+
+:root {
+  --bg: #0a0e17;
+  --surface: #101724;
+  --surface-2: #151f30;
+  --border: rgba(148, 163, 184, 0.14);
+  --text: #e9eef7;
+  --muted: #8e99ae;
+  --accent: #34d399;
+  --accent-strong: #10b981;
+  --accent-deep: #059669;
+  --gold: #fbbf24;
+  --blue: #60a5fa;
+  --red: #f87171;
+  --radius: 16px;
+}
+
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  font-family: Inter, 'Helvetica Neue', sans-serif;
+  background:
+    radial-gradient(900px 480px at 85% -10%, rgba(52, 211, 153, 0.10), transparent 60%),
+    radial-gradient(700px 420px at -10% 30%, rgba(96, 165, 250, 0.08), transparent 60%),
+    var(--bg);
+  background-attachment: fixed;
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection { background: rgba(52, 211, 153, 0.35); }
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #26324a; border-radius: 8px; border: 2px solid var(--bg); }
+::-webkit-scrollbar-thumb:hover { background: #334362; }
+
+/* ---------- Layout ---------- */
+.page { max-width: 1180px; margin: 0 auto; padding: 28px 20px 56px; }
+
+.page h2, .page-title {
+  font-family: Sora, Inter, sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 4px;
+}
+
+.page-subtitle { color: var(--muted); font-size: 14px; margin: 0 0 22px; }
+
+.grid { display: grid; gap: 16px; }
+
+.form-row { display: flex; flex-wrap: wrap; gap: 14px; align-items: flex-start; }
+.form-row mat-form-field { flex: 1 1 170px; }
+
+/* ---------- Cards ---------- */
+mat-card, .mat-mdc-card {
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.012)) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+  box-shadow: 0 10px 30px rgba(2, 6, 16, 0.45) !important;
+  color: var(--text) !important;
+  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+mat-card:hover { border-color: rgba(148, 163, 184, 0.28) !important; }
+
+.mat-mdc-card-title { font-family: Sora, Inter, sans-serif !important; }
+.mat-mdc-card-subtitle, mat-card-subtitle { color: var(--muted) !important; }
+
+/* ---------- Tabelas ---------- */
+table.simple {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.008));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  font-size: 14px;
+}
+
+table.simple th, table.simple td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+}
+
+table.simple th {
+  background: rgba(148, 163, 184, 0.07);
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+table.simple tbody tr { transition: background 0.15s ease; }
+table.simple tbody tr:hover { background: rgba(52, 211, 153, 0.05); }
+table.simple tbody tr:last-child td { border-bottom: none; }
+
+.num { text-align: right !important; font-variant-numeric: tabular-nums; }
+.positivo { color: var(--accent); }
+.negativo { color: var(--red); }
+
+/* ---------- Botões ---------- */
+.mat-mdc-unelevated-button.mat-primary,
+.mat-mdc-raised-button.mat-primary {
+  background: linear-gradient(135deg, var(--accent-strong), var(--accent-deep)) !important;
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.01em;
+  box-shadow: 0 6px 18px rgba(16, 185, 129, 0.35) !important;
+  transition: filter 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.mat-mdc-unelevated-button.mat-primary:hover:not(:disabled),
+.mat-mdc-raised-button.mat-primary:hover:not(:disabled) {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(16, 185, 129, 0.45) !important;
+}
+
+.mat-mdc-button.mat-primary, .mat-mdc-outlined-button.mat-primary { color: var(--accent) !important; }
+.mat-mdc-button.mat-warn { color: var(--red) !important; }
+.mat-mdc-button.mat-warn:hover { background: rgba(248, 113, 113, 0.08) !important; }
+.mat-mdc-button { border-radius: 10px !important; }
+
+/* ---------- Campos de formulário ---------- */
+.mdc-text-field--filled {
+  background-color: rgba(148, 163, 184, 0.08) !important;
+  border-radius: 10px 10px 0 0 !important;
+}
+
+.mat-mdc-form-field input, .mat-mdc-form-field mat-select { color: var(--text) !important; }
+.mat-mdc-form-field .mat-mdc-label-text, .mat-mdc-form-field .mdc-floating-label { color: var(--muted) !important; }
+.mdc-line-ripple::after { border-bottom-color: var(--accent) !important; }
+
+.mat-mdc-select-panel, .mat-mdc-select-panel .mat-mdc-option {
+  background-color: var(--surface-2) !important;
+  color: var(--text) !important;
+}
+.mat-mdc-option:hover:not(.mdc-list-item--disabled) { background: rgba(52, 211, 153, 0.10) !important; }
+
+input[type='month'], input[type='date'], input[type='number'],
+input[type='email'], input[type='password'], input[type='text'] { color-scheme: dark; }
+
+/* ---------- Tabs ---------- */
+.mat-mdc-tab-group {
+  --mdc-tab-indicator-active-indicator-color: var(--accent);
+  --mat-tab-header-active-label-text-color: var(--accent);
+  --mat-tab-header-inactive-label-text-color: var(--muted);
+  --mat-tab-header-active-focus-label-text-color: var(--accent);
+  --mat-tab-header-active-hover-label-text-color: var(--accent);
+}
+.mat-mdc-tab .mdc-tab__text-label { font-weight: 600; font-size: 14px; }
+.mat-mdc-tab-header { border-bottom: 1px solid var(--border); }
+
+/* ---------- Snackbar ---------- */
+.mat-mdc-snack-bar-container .mdc-snackbar__surface {
+  background: var(--surface-2) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border);
+  border-radius: 12px !important;
+  box-shadow: 0 12px 32px rgba(2, 6, 16, 0.55) !important;
+}
+.mat-mdc-snack-bar-container .mat-mdc-button { color: var(--accent) !important; }
+
+/* ---------- Toolbar ---------- */
+mat-toolbar.mat-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(10, 14, 23, 0.82) !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+  color: var(--text) !important;
+}

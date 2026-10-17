@@ -1,0 +1,33 @@
+# Maven
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# Segredos e ambiente
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+application-local.properties
+application-local.yml
+
+# Frontend (Angular)
+node_modules/
+dist/
+.angular/
+
+# Uploads de teste
+uploads/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+
+# Logs e sistema
+*.log
+.DS_Store
+Thumbs.db
