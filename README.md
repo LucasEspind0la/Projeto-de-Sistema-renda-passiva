@@ -1,10 +1,5 @@
 #  Projeto de Estudo 💰 Finanças & Renda Passiva
 
-Sistema completo de gestão financeira pessoal para controle de patrimônio, investimentos e acompanhamento da independência financeira.
-
-![Dashboard](screenshots/dashboard.png)
-
----
 
 ##  Funcionalidades
 
@@ -38,25 +33,27 @@ Sistema completo de gestão financeira pessoal para controle de patrimônio, inv
 
 ---
 
-## Telas do Sistema
+##  Telas do Sistema
 
-###  Página de Login
+### 🔐 Página de Login
 Interface simples e segura para acesso ao sistema.
+
 ![Login](screenshots/login.png)
 
-###  Dashboard Principal
+### 📊 Dashboard Principal
 Acompanhamento completo do patrimônio e métricas financeiras em tempo real.
+
 ![Dashboard](screenshots/dashboard.png)
 
-###  Gestão de Finanças
+### 💵 Gestão de Finanças
 Cadastro e controle de receitas, despesas e dívidas com categorização.
+
 ![Finanças](screenshots/financas.png)
 
-### Carteira de Ativos
+### 📈 Carteira de Ativos
 Gerenciamento completo da carteira de investimentos e proventos.
-![Ativos](screenshots/ativos.png)
 
----
+![Ativos](screenshots/ativos.png)
 
 
 ## 🛠️ Tecnologias Utilizadas
