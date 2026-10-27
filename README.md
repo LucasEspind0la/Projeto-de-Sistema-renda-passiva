@@ -33,8 +33,6 @@
 
 ---
 
-## Telas do Sistema
-
 ##  Telas do Sistema
 
 ### 🔐 Página de Login
