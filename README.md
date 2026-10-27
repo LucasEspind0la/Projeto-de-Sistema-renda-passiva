@@ -77,4 +77,44 @@ Gerenciamento completo da carteira de investimentos e proventos.
 - **Chart.js/ApexCharts** - Gráficos interativos 
 
 
+---
 
+### Estrutura :) 
+
+financas/
+├── backend/
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/com/financas/
+│   │   │   │   ├── FinancasApplication.java
+│   │   │   │   ├── controller/
+│   │   │   │   │   ├── AuthController.java
+│   │   │   │   │   ├── FinancasController.java
+│   │   │   │   │   ├── AtivosController.java
+│   │   │   │   │   └── DashboardController.java
+│   │   │   │   ├── model/
+│   │   │   │   │   ├── User.java
+│   │   │   │   │   ├── Financas.java
+│   │   │   │   │   └── Ativos.java
+│   │   │   │   ├── repository/
+│   │   │   │   ├── service/
+│   │   │   │   └── security/
+│   │   │   └── resources/
+│   │   │       ├── application.yml
+│   │   │       └── db/migration/
+│   │   └── test/
+│   └── pom.xml
+├── frontend/
+│   ├── src/
+│   │   ├── app/
+│   │   │   ├── components/
+│   │   │   ├── services/
+│   │   │   └── models/
+│   │   └── assets/
+│   └── package.json
+├── screenshots/
+│   ├── login.png
+│   ├── dashboard.png
+│   ├── financas.png
+│   └── ativos.png
+── README.md
