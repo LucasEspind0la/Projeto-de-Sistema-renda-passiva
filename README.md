@@ -35,19 +35,21 @@
 
 ## Telas do Sistema
 
-###  Página de Login
+##  Telas do Sistema
+
+### 🔐 Página de Login
 Interface simples e segura para acesso ao sistema.
 ![Login](screenshots/login.png)
 
-###  Dashboard Principal
+### 📊 Dashboard Principal
 Acompanhamento completo do patrimônio e métricas financeiras em tempo real.
 ![Dashboard](screenshots/dashboard.png)
 
-###  Gestão de Finanças
+### 💵 Gestão de Finanças
 Cadastro e controle de receitas, despesas e dívidas com categorização.
 ![Finanças](screenshots/financas.png)
 
-### Carteira de Ativos
+###  Carteira de Ativos
 Gerenciamento completo da carteira de investimentos e proventos.
 ![Ativos](screenshots/ativos.png)
 
