@@ -79,7 +79,7 @@ Gerenciamento completo da carteira de investimentos e proventos.
 
 ---
 
-### Estrutura :) 
+## 📁 Estrutura
 
 financas/
 ├── backend/
@@ -104,7 +104,7 @@ financas/
 │   │   │       └── db/migration/
 │   │   └── test/
 │   └── pom.xml
-├── frontend/
+── frontend/
 │   ├── src/
 │   │   ├── app/
 │   │   │   ├── components/
@@ -117,4 +117,4 @@ financas/
 │   ├── dashboard.png
 │   ├── financas.png
 │   └── ativos.png
-── README.md
+└── README.md
