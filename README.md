@@ -1,10 +1,5 @@
 #  Projeto de Estudo 💰 Finanças & Renda Passiva
 
-Sistema completo de gestão financeira pessoal para controle de patrimônio, investimentos e acompanhamento da independência financeira.
-
-![Dashboard](screenshots/dashboard.png)
-
----
 
 ##  Funcionalidades
 
