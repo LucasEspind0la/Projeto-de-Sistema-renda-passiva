@@ -1,55 +1,83 @@
-# Finanças & Renda Passiva
+#  Projeto de Estudo 💰 Finanças & Renda Passiva
 
-Gestão financeira pessoal com foco em renda passiva e independência financeira.
+Sistema completo de gestão financeira pessoal para controle de patrimônio, investimentos e acompanhamento da independência financeira.
 
-```
-financas/
-├── docker-compose.yml     # PostgreSQL 16
-├── backend/               # Spring Boot 3.3.4 / Java 21
-└── frontend/              # Angular 17 (standalone + signals)
-```
+![Dashboard](screenshots/dashboard.png)
 
-## Tecnologias
+---
 
-- **Backend:** Java 21, Spring Boot 3.3.4, Spring Security, Spring Data JPA, Bean Validation, Lombok
-- **Autenticação:** JWT (jjwt 0.12.6)
-- **Banco de dados:** PostgreSQL 16 com migrations Flyway
-- **Frontend:** Angular 17 (standalone + signals)
-- **Infra:** Docker Compose
+##  Funcionalidades
 
-## Como rodar
+###  Dashboard Interativo
+- Visão geral do patrimônio líquido
+- Renda passiva mensal estimada
+- Gastos do mês (fixos e variáveis)
+- Gráfico de fluxo de caixa (receitas vs despesas)
+- Gráfico de distribuição de ativos
+- Cálculo de cobertura de independência financeira
 
-```bash
-# 1) Banco
-docker compose up -d
+###  Gestão de Finanças
+- Cadastro de receitas (salários, proventos, outros)
+- Controle de despesas (fixas e variáveis)
+- Registro de dívidas
+- Categorização automática
+- Recorrência mensal
 
-# 2) Backend  (http://localhost:8080 — Swagger em /swagger-ui.html)
-cd backend && mvn spring-boot:run
-# Em produção defina JWT_SECRET (>= 32 caracteres), DB_URL, DB_USER, DB_PASSWORD, CORS_ORIGINS
+###  Carteira de Ativos
+- Cadastro de investimentos (FIIs, Ações, Renda Fixa, etc.)
+- Acompanhamento de valor investido vs valor atualizado
+- Proventos mensais estimados
+- Rentabilidade por tipo de ativo
+- Evolução patrimonial
 
-# 3) Frontend (http://localhost:4200)
-cd frontend && npm install && npm start
-```
+###  Autenticação e Segurança
+- Login seguro com JWT
+- Criptografia de senhas (BCrypt)
+- Sessões protegidas
+- CORS configurado
 
-Testes do backend: `cd backend && mvn test`
+---
 
-## Regras de cálculo (`RendaPassivaService`)
+## Telas do Sistema
 
-| Métrica | Fórmula |
-|---|---|
-| Saldo atual | Receitas do mês − Gastos do mês |
-| Patrimônio líquido | Σ valor atual dos ativos − Σ valor remanescente das dívidas |
-| Renda passiva mensal | Σ proventos mensais estimados dos ativos |
-| Cobertura de independência | Renda passiva ÷ Gastos fixos do mês × 100 (nula se não há gastos fixos) |
+###  Página de Login
+Interface simples e segura para acesso ao sistema.
+![Login](screenshots/login.png)
 
-Receitas contam por recorrência: **única** só no mês da data; **mensal** a partir da data; **anual** todo ano no mesmo mês.
-Gastos do mês = despesas com vencimento dentro do mês consultado.
+###  Dashboard Principal
+Acompanhamento completo do patrimônio e métricas financeiras em tempo real.
+![Dashboard](screenshots/dashboard.png)
 
-## Decisões de arquitetura
+###  Gestão de Finanças
+Cadastro e controle de receitas, despesas e dívidas com categorização.
+![Finanças](screenshots/financas.png)
 
-- **Layered** (web → service → repository → domain) com DTOs `record` e validação Bean Validation.
-- `CrudService` / `CrudController` genéricos (Template Method) evitam duplicar CRUD; cada agregado só define o mapeamento.
-- **Multi-tenant por usuário**: toda consulta filtra por `usuario_id` (vindo do JWT, nunca do corpo da requisição).
-- `BigDecimal` / `NUMERIC(15,2)` em todo valor monetário; PKs `UUID`; schema via Flyway (`V1__schema_inicial.sql`).
-- Erros padronizados em `ProblemDetail` (RFC 7807) via `@RestControllerAdvice`.
-- Frontend: interceptor anexa o Bearer token e trata 401 (logout), 403 e 5xx globalmente.
+### Carteira de Ativos
+Gerenciamento completo da carteira de investimentos e proventos.
+![Ativos](screenshots/ativos.png)
+
+---
+
+
+## 🛠️ Tecnologias Utilizadas
+
+### Backend
+- **Java 21** - Linguagem principal
+- **Spring Boot 3.3.4** - Framework principal
+- **Spring Security** - Autenticação e autorização
+- **Spring Data JPA** - Persistência de dados
+- **PostgreSQL** - Banco de dados relacional
+- **Flyway** - Migrações de banco de dados
+- **JWT (JSON Web Tokens)** - Autenticação stateless
+- **BCrypt** - Criptografia de senhas
+- **Maven** - Gerenciamento de dependências
+- **HikariCP** - Connection pool
+
+### Frontend
+- **Angular/React** - Framework frontend 
+- **TypeScript** - Linguagem tipada
+- **HTML5/CSS3** - Estrutura e estilo
+- **Chart.js/ApexCharts** - Gráficos interativos 
+
+
+
